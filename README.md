@@ -24,6 +24,7 @@ An algorithm to detect DRAW needs to be implemented.
 # Further improvements
 
 The Minimax Algorithm could be more efficient (maybe multi threading?).
+
 Player vs Player mode.
 
 # Test this current version of the bot
