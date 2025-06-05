@@ -13,6 +13,17 @@ For debug purposes the bot also has a /ping and /stats commands.
 
 More test needs to be done for multiple servers/users checkers games simultaneously.
 
+## Setup
+
+1. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Provide your Discord bot token using the `DISCORD_BOT_TOKEN` environment
+   variable or edit `modules/constants.py` with your token.
+3. Ensure the `boards/` directory exists. This repository includes the folder
+   with a `.gitkeep` file so the bot can store board images there at runtime.
+
 # Known Issues
 
 The bot has trouble detecting when a game has ended due to the fact that board.white_left and board.red_left keep getting reseted to 12.

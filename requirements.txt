@@ -1,0 +1,4 @@
+discord.py
+discord-py-slash-command
+Pillow
+psutil

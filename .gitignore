@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Board images generated at runtime
+boards/*.png
+boards/*.gif
+
+# Virtual environment
+venv/
+
