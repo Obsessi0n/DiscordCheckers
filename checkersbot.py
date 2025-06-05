@@ -36,40 +36,38 @@ dictionaryNumber = ['1', '2', '3', '4', '5', '6', '7', '8']
 
 
 def cleanMovInput(input):
-	InputList = list(input)
+        InputList = list(input)
 
-	originCol = None
-	originRow = None
-	destCol = None
-	destRow = None
+        originCol = None
+        originRow = None
+        destCol = None
+        destRow = None
 
-	for char in InputList:
-		if char in dictionaryNumber:
-			if originRow == None:
-				originRow = char
-			else:
-				destRow = char
-		elif char in dictionaryLetter:
-			if originCol == None:
-				originCol = char
-			else:
-				destCol = char
-		else:
-			pass
+        for char in InputList:
+                if char in dictionaryNumber:
+                        if originRow is None:
+                                originRow = char
+                        else:
+                                destRow = char
+                elif char in dictionaryLetter:
+                        if originCol is None:
+                                originCol = char
+                        else:
+                                destCol = char
+                else:
+                        pass
 
+        if None in (originCol, originRow, destCol, destRow):
+                return False
 
+        # Convert values into matrix acceptable values
+        originRow = 8 - int(originRow)
+        destRow = 8 - int(destRow)
+        originCol = dictionaryLetter.index(originCol)
+        destCol = dictionaryLetter.index(destCol)
 
-	#Convert values into matrix acceptable values
-	originRow = 8-(int(originRow))
-	destRow = 8-(int(destRow))
-	originCol = dictionaryLetter.index(originCol)
-	destCol = dictionaryLetter.index(destCol)
-
-	if originCol == None or originRow == None or destCol == None or destRow == None:
-		return False
-	else:
-		moveClean = [originRow, originCol, destRow, destCol]
-		return moveClean
+        moveClean = [originRow, originCol, destRow, destCol]
+        return moveClean
 
 
 
