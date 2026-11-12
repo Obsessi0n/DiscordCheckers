@@ -2,11 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
 
-# Board images generated at runtime
-boards/*.png
-boards/*.gif
-
-# Virtual environment
+# Virtual environments
 venv/
+.venv/
 
+# The bot's token, when kept in a file
+.env
